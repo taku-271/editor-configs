@@ -24,3 +24,6 @@ opt.smartcase = true
 
 opt.cursorline = true
 
+-- クリップボードを共有
+opt.clipboard:append{"unnamedplus"}
+
