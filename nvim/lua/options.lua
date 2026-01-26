@@ -30,3 +30,8 @@ opt.clipboard:append{"unnamedplus"}
 -- インクリメントリサーチ
 opt.incsearch = true
 
+-- Leaderをスペースに設定
+vim.g.mapleader = " "
+
+opt.termguicolors = true
+

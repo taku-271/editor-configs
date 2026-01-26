@@ -40,4 +40,14 @@
   "githubPullRequests.fileListLayout": "tree",
   "githubPullRequests.hideViewedFiles": false,
   "chat.mcp.gallery.enabled": true,
+  "chat.viewSessions.orientation": "stacked",
+  "[python]": {
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.defaultColorDecorators": "never",
+    "gitlens.codeLens.symbolScopes": [
+      "!Module"
+    ],
+    "editor.formatOnType": true,
+    "editor.wordBasedSuggestions": "off"
+  },
 }
