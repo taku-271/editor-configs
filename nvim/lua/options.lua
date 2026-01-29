@@ -35,3 +35,7 @@ vim.g.mapleader = " "
 
 opt.termguicolors = true
 
+-- 分割された場合にそこにフォーカスする
+opt.splitbelow = true
+opt.splitright = true
+
