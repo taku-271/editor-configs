@@ -22,7 +22,9 @@ opt.ignorecase = true
 -- 検索時に大文字が含まれる時のみ区別する
 opt.smartcase = true
 
+-- カーソルをハイライト
 opt.cursorline = true
+opt.cursorcolumn = true
 
 -- クリップボードを共有
 opt.clipboard:append{"unnamedplus"}
@@ -30,7 +32,7 @@ opt.clipboard:append{"unnamedplus"}
 -- インクリメントリサーチ
 opt.incsearch = true
 
--- Leaderをスペースに設定
+-- leaderをスペースに設定
 vim.g.mapleader = " "
 
 opt.termguicolors = true
