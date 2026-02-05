@@ -37,4 +37,4 @@ RUN npm install -g @anthropic-ai/claude-code
 ENV PATH="/root/.local/share/nvim/mason/bin:${PATH}"
 
 WORKDIR /workspace
-CMD ["nvim", "."]
+CMD ["nvim", "+TSUpdate", "."]
