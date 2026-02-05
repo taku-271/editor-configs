@@ -1,0 +1,19 @@
+services:
+  nvim:
+    build: .
+    volumes:
+      - ${TARGET_PATH}:/workspace
+      - ~/Documents/dotfiles/nvim:/root/.config/nvim
+      - ~/.local/share/docker-nvim:/root/.local/share/nvim
+      - ~/.local/state/docker-nvim:/root/.local/state/nvim
+      - ~/.cache/docker-nvim:/root/.cache/nvim
+      - ~/.config/github-copilot:/root/.config/github-copilot
+      - ~/.gitconfig:/root/.gitconfig:ro
+      - /run/host-services/ssh-auth.sock:/run/host-services/ssh-auth.sock
+    environment:
+      - SSH_AUTH_SOCK=/run/host-services/ssh-auth.sock
+    stdin_open: true
+    ports:
+      - 8000:8000
+    tty: true
+

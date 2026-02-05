@@ -26,6 +26,19 @@ opt.smartcase = true
 opt.cursorline = true
 opt.cursorcolumn = true
 
+-- ssh先やdocker内でもクリップボードを共有
+vim.g.clipboard = {
+  name = "OSC 52",
+  copy = {
+    ["+"] = require("vim.ui.clipboard.osc52").copy("+"),
+    ["*"] = require("vim.ui.clipboard.osc52").copy("*"),
+  },
+  paste = {
+    ["+"] = require("vim.ui.clipboard.osc52").paste("+"),
+    ["*"] = require("vim.ui.clipboard.osc52").paste("*"),
+  },
+}
+
 -- クリップボードを共有
 opt.clipboard:append{"unnamedplus"}
 
@@ -36,6 +49,9 @@ opt.incsearch = true
 vim.g.mapleader = " "
 
 opt.termguicolors = true
+
+-- カーソル停止からイベント発火までの時間(ms)
+opt.updatetime = 300
 
 -- 分割された場合にそこにフォーカスする
 opt.splitbelow = true

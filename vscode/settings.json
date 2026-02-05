@@ -53,6 +53,7 @@
   "chat.viewSessions.orientation": "stacked",
   "vsicons.dontShowNewVersionMessage": true,
   "claudeCode.useCtrlEnterToSend": true,
+  "explorer.confirmPasteNative": false,
   // "claudeCode.environmentVariables": [
   //   {
   //     "name": "CLAUDE_CODE_USE_BEDROCK",

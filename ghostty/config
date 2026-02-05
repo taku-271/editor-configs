@@ -1,0 +1,12 @@
+background-blur-radius = 20
+background-opacity = 0.9
+font-family = BlexMono Nerd Font Mono
+font-size = 16
+theme = Ryuuko
+window-decoration = true
+
+window-save-state = always
+
+macos-option-as-alt = left
+
+maximize = true
