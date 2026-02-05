@@ -34,6 +34,10 @@ RUN LAZYGIT_VERSION=$(curl -s https://api.github.com/repos/jesseduffield/lazygit
 # Claude Codeのインストール
 RUN npm install -g @anthropic-ai/claude-code
 
+# GitHubのSSHホストキーを事前登録
+RUN mkdir -p /root/.ssh \
+  && ssh-keyscan github.com >> /root/.ssh/known_hosts 2>/dev/null
+
 ENV PATH="/root/.local/share/nvim/mason/bin:${PATH}"
 
 WORKDIR /workspace
