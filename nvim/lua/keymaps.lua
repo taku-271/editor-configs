@@ -21,3 +21,8 @@ map("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
 map("n", "gt", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
 
 map("n", "rn", "<cmd> lua vim.lsp.buf.rename()<CR>", opts)
+
+map("n", "R", "<Plug>(operator-replace)", opts)
+map("v", "R", "<Plug>(operator-replace)", opts)
+
+map("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)

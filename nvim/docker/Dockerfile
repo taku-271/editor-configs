@@ -29,6 +29,10 @@ RUN curl -fsSL https://deb.nodesource.com/setup_current.x | bash - \
   && apt-get install -y --no-install-recommends nodejs \
   && rm -rf /var/lib/apt/lists/*
 
+# Pythonのインストール
+RUN apt-get update && apt-get install -y python3 python3-pip \
+  && pip install --break-system-packages pynvim
+
 # Neovim最新版のインストール
 RUN curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-arm64.tar.gz \
   && tar xzf nvim-linux-arm64.tar.gz -C /opt \

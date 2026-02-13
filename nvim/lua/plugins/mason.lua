@@ -6,7 +6,7 @@ return {
   config = function()
     require("mason").setup()
     require("mason-lspconfig").setup({
-      ensure_installed = { "ts_ls", "eslint", "lua_ls" },
+      ensure_installed = { "ts_ls", "eslint", "lua_ls", "pyright" },
     })
     local registry = require("mason-registry")
     local ensure_tools = { "eslint_d" }

@@ -9,9 +9,11 @@ return {
     -- スニペットエンジン（これがないと警告が出る場合があります）
     "L3MON4D3/LuaSnip",
     "saadparwaiz1/cmp_luasnip",
+    "onsails/lspkind-nvim",
   },
   config = function()
     local cmp = require("cmp")
+    local lspkind = require("lspkind")
 
     cmp.setup({
       snippet = {
@@ -51,6 +53,16 @@ return {
       }, {
         { name = "cmdline" },
       }),
+      formatting = {
+        format = lspkind.cmp_format({
+          mode = "symbol_text",
+          maxwidth = 50,
+          ellipsis_char = "...",
+          before = function(entry, vim_item)
+            return vim_item
+          end
+        })
+      }
     })
 
     -- 検索の補完設定 (/)
